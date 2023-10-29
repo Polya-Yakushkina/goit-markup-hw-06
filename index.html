@@ -18,8 +18,8 @@
   </head>
 
   <body>
-    <!-- <header class="header">
-      <div class="container header-container">
+    <header class="header">
+      <div class="container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html"
             >Web<span class="header-logo-color">Studio</span></a
@@ -51,8 +51,79 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="open-mob-menu">
+          <svg class="burger" width="24" height="24">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu /is-open/">
+        <button type="button" class="x-close">
+          <svg class="x-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#x-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mob-menu-list">
+          <li h2 class="mob-menu-item">
+            <a class="mob-menu-link current" href="./index.html">Studio</a>
+          </li>
+          <li h2 class="mob-menu-item">
+            <a class="mob-menu-link" href="">Portfolio</a>
+          </li>
+          <li h2 class="mob-menu-item">
+            <a class="mob-menu-link" href="">Contacts</a>
+          </li>
+        </ul>
+
+        <address class="mob-address">
+          <ul class="mob-address-menu">
+            <li class="mob-address-item">
+              <a class="mob-address-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-address-item">
+              <a class="mob-address-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="soc-icons-list">
+          <li class="soc-icon">
+            <a href="" class="soc-link">
+              <svg class="soc-icon-svg" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-icon">
+            <a href="" class="soc-link">
+              <svg class="soc-icon-svg" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-icon">
+            <a href="" class="soc-link">
+              <svg class="soc-icon-svg" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="soc-icon">
+            <a href="" class="soc-link">
+              <svg class="soc-icon-svg" width="24" height="24">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <main>
       <section class="hero">
@@ -123,7 +194,7 @@
           <h2 class="team-title">Our Team</h2>
           <ul class="team-menu">
             <li class="team-item">
-              <img
+              <img srcset="./images/mark-2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Mark Guerrero's photo"
                 width="264"
@@ -133,31 +204,31 @@
               <div class="team-description">
                 <h3 class="team-subtitle">Mark Guerrero</h3>
                 <p class="team-item-text">Product Designer</p>
-                <ul class="team-icons">
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                <ul class="soc-icons-list">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#twit-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#fb-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#link-team"></use>
                       </svg>
                     </a>
@@ -166,7 +237,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img
+              <img srcset="./images/tom-2x.jpg 2x"
                 src="./images/tom.jpg"
                 alt="Tom Ford's photo"
                 width="264"
@@ -176,31 +247,31 @@
               <div class="team-description">
                 <h3 class="team-subtitle">Tom Ford</h3>
                 <p class="team-item-text">Frontend Developer</p>
-                <ul class="team-icons">
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                <ul class="soc-icons-list">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#twit-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#fb-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#link-team"></use>
                       </svg>
                     </a>
@@ -209,8 +280,8 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/camilla.jpg"
+              <img srcset="./images/camila-2x.jpg 2x"
+                src="./images/camila.jpg"
                 alt="Camila Garcia's photo"
                 width="264"
                 height="260"
@@ -219,31 +290,31 @@
               <div class="team-description">
                 <h3 class="team-subtitle">Camila Garcia</h3>
                 <p class="team-item-text">Marketing</p>
-                <ul class="team-icons">
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                <ul class="soc-icons-list">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#twit-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#fb-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#link-team"></use>
                       </svg>
                     </a>
@@ -252,7 +323,7 @@
               </div>
             </li>
             <li class="team-item">
-              <img
+              <img srcset="./images/daniel-2x.jpg 2x"
                 src="./images/daniel.jpg"
                 alt="Daniel Wilson's photo"
                 width="264"
@@ -262,31 +333,31 @@
               <div class="team-description">
                 <h3 class="team-subtitle">Daniel Wilson</h3>
                 <p class="team-item-text">UI Designer</p>
-                <ul class="team-icons">
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                <ul class="soc-icons-list">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#instagram"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#twit-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#fb-team"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="soc-media-icon">
-                    <a href="" class="team-soc-link">
-                      <svg class="team-icon-svg" width="16" height="16">
+                  <li class="soc-icon">
+                    <a href="" class="soc-link">
+                      <svg class="soc-icon-svg" width="16" height="16">
                         <use href="./images/icons.svg#link-team"></use>
                       </svg>
                     </a>
@@ -304,13 +375,18 @@
           <ul class="portfolio-menu">
             <li class="portfolio-item">
               <div class="portfolio-cover">
-                <img
+                <picture>
+                  <source srcset="./images/portfolio-img-1.jpg 1x, ./images/portfolio-img-1-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-1.jpg 1x, ./images/portfolio-tab-1-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-1.jpg 1x, ./images/portfolio-mob-1-2x.jpg 2x" media="(max-width: 767px)">
+                  <img
                   src="./images/portfolio-img-1.jpg"
                   alt="Bank application photo"
                   width="360"
                   height="300"
                   class="portfolio-img"
                 />
+                </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -324,13 +400,18 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover">
-                <img
+                <picture>
+                  <source srcset="./images/portfolio-img-2.jpg 1x, ./images/portfolio-img-2-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-2.jpg 1x, ./images/portfolio-tab-2-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-2.jpg 1x, ./images/portfolio-mob-2-2x.jpg 2x" media="(max-width: 767px)">
+                  <img
                   src="./images/portfolio-img-2.jpg"
                   alt="Photo of cashless payment by phone"
                   width="360"
                   height="300"
                   class="portfolio-img"
                 />
+                </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -344,6 +425,10 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover">
+                <picture>
+                  <source srcset="./images/portfolio-img-3.jpg 1x, ./images/portfolio-img-3-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-3.jpg 1x, ./images/portfolio-tab-3-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-3.jpg 1x, ./images/portfolio-mob-3-2x.jpg 2x" media="(max-width: 767px)">
                 <img
                   src="./images/portfolio-img-3.jpg"
                   alt="Photo of notebook and phone with opened Meditation application"
@@ -351,6 +436,7 @@
                   height="300"
                   class="portfolio-img"
                 />
+              </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -364,6 +450,10 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover">
+                <picture>
+                  <source srcset="./images/portfolio-img-4.jpg 1x, ./images/portfolio-img-4-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-4.jpg 1x, ./images/portfolio-tab-4-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-4.jpg 1x, ./images/portfolio-mob-4-2x.jpg 2x" media="(max-width: 767px)">
                 <img
                   src="./images/portfolio-img-4.jpg"
                   alt="Photo of a taxi driver in a car with the phone app"
@@ -371,6 +461,7 @@
                   height="300"
                   class="portfolio-img"
                 />
+                </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -384,6 +475,10 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover">
+                <picture>
+                  <source srcset="./images/portfolio-img-5.jpg 1x, ./images/portfolio-img-5-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-5.jpg 1x, ./images/portfolio-tab-5-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-5.jpg 1x, ./images/portfolio-mob-5-2x.jpg 2x" media="(max-width: 767px)">
                 <img
                   src="./images/portfolio-img-5.jpg"
                   alt="5 photos of different phone wallpapers"
@@ -391,6 +486,7 @@
                   height="300"
                   class="portfolio-img"
                 />
+              </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -404,6 +500,10 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-cover">
+                <picture>
+                  <source srcset="./images/portfolio-img-6.jpg 1x, ./images/portfolio-img-6-2x.jpg 2x" media="(min-width: 1158px)">
+                  <source srcset="./images/portfolio-tab-6.jpg 1x, ./images/portfolio-tab-6-2x.jpg 2x" media="(min-width: 768px)">
+                  <source srcset="./images/portfolio-mob-6.jpg 1x, ./images/portfolio-mob-6-2x.jpg 2x" media="(max-width: 767px)">
                 <img
                   src="./images/portfolio-img-6.jpg"
                   alt="Photo of a girl in orange sweater smiling to somebody in the phone"
@@ -411,6 +511,7 @@
                   height="300"
                   class="portfolio-img"
                 />
+              </picture>
                 <p class="portfolio-overlay-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -440,31 +541,31 @@
         </div>
         <div class="footer-container-icons">
           <p class="footer-title">Social media</p>
-          <ul class="footer-icons">
-            <li class="footer-soc-icon">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-icon-svg" width="24" height="24">
+          <ul class="soc-icons-list">
+            <li class="soc-icon">
+              <a href="" class="soc-link">
+                <svg class="soc-icon-svg" width="24" height="24">
                   <use href="./images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-icon">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-icon-svg" width="24" height="24">
+            <li class="soc-icon">
+              <a href="" class="soc-link">
+                <svg class="soc-icon-svg" width="24" height="24">
                   <use href="./images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-icon">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-icon-svg" width="24" height="24">
+            <li class="soc-icon">
+              <a href="" class="soc-link">
+                <svg class="soc-icon-svg" width="24" height="24">
                   <use href="./images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-icon">
-              <a href="" class="footer-soc-link">
-                <svg class="footer-icon-svg" width="24" height="24">
+            <li class="soc-icon">
+              <a href="" class="soc-link">
+                <svg class="soc-icon-svg" width="24" height="24">
                   <use href="./images/icons.svg#linkedin"></use>
                 </svg>
               </a>
@@ -495,7 +596,7 @@
       </div>
     </footer>
 
-    <div class="blackdrop is-open">
+    <div class="blackdrop /is-open/">
       <div class="modal">
         <button type="button" class="x-close">
           <svg class="x-close-icon" width="8" height="8">

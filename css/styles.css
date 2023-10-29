@@ -63,6 +63,36 @@ address {
     margin: 0 auto;
 }
 
+.soc-icons-list {
+    display: flex;
+    justify-content: center;
+}
+
+.soc-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-link:hover,
+.soc-link:focus {
+    background-color: #404BBF;
+}
+
+.soc-icon-svg {
+    fill: #f4f4fd;
+}
+
 /** ------------------------------------------------------ */
 
 /** ----------------------- HEADER ----------------------- */
@@ -71,15 +101,24 @@ address {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.header-container {
+.header .container {
+    padding: 16px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header-menu {
+    display: none;
+}
+
+.header-address {
+    display: none;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
-    flex-grow: 1;
 }
 
 .header-logo {
@@ -90,33 +129,87 @@ address {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding: 24px 0;
-    margin-right: 76px;
 }
 .header-logo-color {
     color: #2e2f42;
-    padding: 24px 0;
 }
 
-.header-menu {
+.open-mob-menu {
+    border: none;
+    /* background-color: transparent; */
+    background-color: #ffffff;
+}
+
+.burger {
+    fill: 2f2f37;
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    padding: 72px 24px 40px 16px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+.mob-menu > .x-close {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    right: 24px;
+    top: 24px;
     display: flex;
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu-link {
-    position: relative;
-    display: block;
-    color: #2E2F42;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
+.x-close-icon {
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.x-close:hover,
+.x-close:focus {
+    background-color: #404BBF;
+    border: none;
+}
+
+.x-close:hover .x-close-icon,
+.x-close:focus .x-close-icon {
+    fill: #FFFFFF;
+}
+
+.mob-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 168px;
+}
+
+.mob-menu-link {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
     letter-spacing: 0.02em;
-    padding: 24px 0;
+    text-transform: capitalize;
+    color: #2E2F42;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-menu-link:hover,
-.header-menu-link:focus {
+.mob-menu-link:hover,
+.mob-menu-link:focus {
     color: #404bbf;
 }
 
@@ -124,44 +217,56 @@ address {
     color: #404BBF;
 }
 
-.current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    background-color: #404bbf;
-    border-radius: 2px;
+.mob-address {
+    margin-bottom: 48px;
 }
 
-.header-address-menu {
+.mob-address-menu {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.header-address-link {
-    color: inherit;
-    font-size: 16px;
-    line-height: 1.5;
+.mob-address-link {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
     letter-spacing: 0.02em;
-    padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #2E2F42;
 }
 
-.header-address-link:hover, .header-address-link:focus {
-    color: #404BBF;
+.link {
+    color: #4D5AE5;
+}
+
+.mob-menu .soc-icons-list {
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 /** ------------------------------------------------------ */
 
 /** ------------------------- HERO ----------------------- */
 .hero {
     background-color: #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/office-desk.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/office-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-mob-2x.jpg);
+    }
 }
 
 .hero > .container {
@@ -276,34 +381,8 @@ address {
     margin-bottom: 8px;
 }
 
-.team-icons {
-    display: flex;
-    justify-content: center;
+.team-item .soc-icons-list {
     gap: 24px;
-}
-
-.soc-media-icon {
-    width: 40px;
-    height: 40px;
-}
-
-.team-soc-link {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #4D5AE5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-soc-link:hover, .team-soc-link:focus {
-    background-color: #404BBF;
-}
-
-.team-icon-svg {
-    fill: #f4f4fd;
 }
 /** ------------------------------------------------------ */
 
@@ -426,35 +505,13 @@ address {
     text-align: center;
 }
 
-.footer-icons {
-    display: flex;
-    justify-content: center;
+.footer .soc-icons-list {
     gap: 16px;
 }
 
-.footer-soc-icon {
-    width: 40px;
-    height: 40px;
-}
-
-.footer-soc-link {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #4D5AE5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
+.footer .soc-link:hover,
+.footer .soc-link:focus {
     background-color: #31D0AA;
-}
-
-.footer-icon-svg {
-    fill: #f4f4fd;
 }
 
 .footer-form {
@@ -669,7 +726,6 @@ address {
 
 .accept-field {
     margin-bottom: 24px;
-    display: flex;
 }
 
 .accept-text {
@@ -682,7 +738,8 @@ address {
 .accept-text a {
     color: #4D5AE5;
     text-decoration: underline;
-    margin-left: 3px;
+    margin-left: 25px;
+    /* margin-left: 3px; */
 }
 
 .accept-text span {
@@ -714,17 +771,104 @@ fill: #F4F4FD;
 }
 /** ------------------------------------------------------ */
 
-/** --------------------- MEDIA -------------------------- */
-
+/** ------------------ MEDIA TABLET ---------------------- */
 @media screen and (min-width: 768px) {
     .container {
         min-width: 768px;
     }
 
-    .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desk.jpg);
+    .open-mob-menu {
+        display: none;
     }
 
+    .header > .container {
+        padding: 0 16px;
+    }
+    
+    .header-nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .header-logo {
+        margin-right: 120px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    
+    .header-menu {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .header-menu-link {
+        padding: 24px 0;
+        position: relative;
+        display: block;
+        color: #2E2F42;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .header-menu-link:hover,
+    .header-menu-link:focus {
+        color: #404bbf;
+    }
+    
+    .current {
+        color: #404BBF;
+    }
+    
+    .current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        background-color: #404bbf;
+        border-radius: 2px;
+    }
+    
+    .header-address {
+        display: block;
+    }
+
+
+    .header-address-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .header-address-link {
+        color: inherit;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .header-address-link:hover, .header-address-link:focus {
+        color: #404BBF;
+    }
+    
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tab.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tab-2x.jpg);
+        }
+    }
+ 
     .hero > .container {
         padding: 112px 136px;
     }
@@ -796,20 +940,49 @@ fill: #F4F4FD;
     .modal {
         min-width: 408px;
         min-height: 584px;
+    }
+
+    .accept-text a {
+        margin-left: 3px;
 }
 }
 /* ------------------------------------------------ */
 
-/* ----------------- DESKTOP ---------------------- */
+/* --------------- MEDIA DESKTOP ------------------ */
 @media screen and (min-width: 1158px) {
     .container {
         min-width: 1158px;
         padding: 120px 15px;
     }
 
+    .header-logo {
+        margin-right: 76px;
+    }
+
+    .header-address-menu {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .header-address-link {
+        padding: 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;        
+    }
+
     .hero {
         max-width: 1440px;
         margin: 0 auto;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desk.jpg);
+    }
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desk-2x.jpg);
+        }
     }
 
     .hero > .container {
