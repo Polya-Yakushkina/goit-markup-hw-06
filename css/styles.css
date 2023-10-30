@@ -59,7 +59,7 @@ address {
 
 .container {
     max-width: 320px;
-    padding: 96px 16px;
+    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -97,12 +97,13 @@ address {
 
 /** ----------------------- HEADER ----------------------- */
 .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
-    padding: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -136,7 +137,6 @@ address {
 
 .open-mob-menu {
     border: none;
-    /* background-color: transparent; */
     background-color: #ffffff;
 }
 
@@ -146,6 +146,8 @@ address {
 
 .mob-menu {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 100%;
@@ -195,7 +197,7 @@ address {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 168px;
+    margin-bottom: auto;
 }
 
 .mob-menu-link {
@@ -253,6 +255,7 @@ address {
 
 /** ------------------------- HERO ----------------------- */
 .hero {
+    padding: 72px 0;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/office-mob.jpg);
     background-repeat: no-repeat;
@@ -269,9 +272,9 @@ address {
     }
 }
 
-.hero > .container {
+/* .hero > .container {
     padding: 72px 16px;
-}
+} */
 
 .hero-title {
     max-width: 169px;
@@ -307,6 +310,10 @@ address {
 /** ------------------------------------------------------ */
 
 /** --------------------- FEATURES ----------------------- */
+.feature {
+    padding: 96px 0;
+}
+
 .feature-menu {
     display: flex;
     flex-wrap: wrap;
@@ -327,6 +334,7 @@ address {
 
 .feature-item-text {
     font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
@@ -334,11 +342,8 @@ address {
 
 /** ----------------------- TEAM ------------------------- */
 .team {
+    padding: 96px 0;
     background-color: #F4F4FD;
-}
-
-.team > .container {
-    padding: 72px 28px;
 }
 
 .team-title {
@@ -353,7 +358,7 @@ address {
 
 .team-item {
     background-color: #fff;
-    width: 100%;
+    width: 264;
     border-radius: 0px 0px 4px 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -387,6 +392,10 @@ address {
 /** ------------------------------------------------------ */
 
 /** -------------------- PORTFOLIO ----------------------- */
+.portfolio {
+    padding: 96px 0; 
+}
+
 .portfolio-title {
     margin-bottom: 72px;
 }
@@ -460,7 +469,7 @@ address {
 /** --------------------- FOOTER ------------------------- */
 .footer {
     background-color: #2E2F42;
-    width: 100%;
+    padding: 96px 0;
 }
 
 .footer > .container {
@@ -774,11 +783,15 @@ fill: #F4F4FD;
 /** ------------------ MEDIA TABLET ---------------------- */
 @media screen and (min-width: 768px) {
     .container {
-        min-width: 768px;
+        max-width: 768px;
     }
 
     .open-mob-menu {
         display: none;
+    }
+
+    .header {
+        padding: 0;
     }
 
     .header > .container {
@@ -858,6 +871,7 @@ fill: #F4F4FD;
     }
     
     .hero {
+        padding: 112px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tab.jpg);
     }
 
@@ -867,10 +881,6 @@ fill: #F4F4FD;
         .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-tab-2x.jpg);
         }
-    }
- 
-    .hero > .container {
-        padding: 112px 136px;
     }
 
     .hero-title {
@@ -892,7 +902,7 @@ fill: #F4F4FD;
     }
 
     .team > .container {
-        padding: 96px 108px;
+        padding: 0 108px;
     }
 
     .team-menu {
@@ -916,7 +926,7 @@ fill: #F4F4FD;
         flex-wrap: wrap;
         justify-content: start;
         gap: 72px 24px;
-        padding: 96px 108px;
+        max-width: 550px;
     }
 
     .footer-logo {
@@ -952,7 +962,7 @@ fill: #F4F4FD;
 @media screen and (min-width: 1158px) {
     .container {
         min-width: 1158px;
-        padding: 120px 15px;
+        padding: 0 15px;
     }
 
     .header-logo {
@@ -973,6 +983,7 @@ fill: #F4F4FD;
 
     .hero {
         max-width: 1440px;
+        padding: 188px 0;
         margin: 0 auto;
         background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-desk.jpg);
     }
@@ -985,8 +996,8 @@ fill: #F4F4FD;
         }
     }
 
-    .hero > .container {
-        padding: 188px 0;
+    .feature {
+        padding: 120px 0;
     }
 
     .feature-menu {
@@ -1021,12 +1032,17 @@ fill: #F4F4FD;
     
     .feature-item-text {
         font-size: 16px;
+        font-weight: 400;
         line-height: 1.5;
         letter-spacing: 0.02em;
     }
 
+    .team {
+        padding: 120px 0;
+    }
+
     .team > .container {
-        padding: 120px 15px;
+        padding: 0 15px;
     }
 
     .team-menu {
@@ -1037,6 +1053,10 @@ fill: #F4F4FD;
         width: calc((100% - 24px * 3) / 4);
     }
 
+    .portfolio {
+        padding: 120px 0;
+    }
+
     .portfolio-menu {
         gap: 48px 24px;
     }
@@ -1045,8 +1065,11 @@ fill: #F4F4FD;
         width: calc((100% - 24px * 2) / 3);
     }
 
-    .footer > .container {
+    .footer {
         padding: 100px 0;
+    }
+
+    .footer > .container {
         flex-wrap: nowrap;
         align-items: baseline;
         flex-direction: row;
