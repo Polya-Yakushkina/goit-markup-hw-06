@@ -272,10 +272,6 @@ address {
     }
 }
 
-/* .hero > .container {
-    padding: 72px 16px;
-} */
-
 .hero-title {
     max-width: 169px;
     color: #FFF;
@@ -353,17 +349,18 @@ address {
 .team-menu {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 72px;
 }
 
 .team-item {
     background-color: #fff;
-    width: 264;
+    width: 264px;
     border-radius: 0px 0px 4px 4px;
     background: #FFF;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .team-description {
@@ -901,18 +898,14 @@ fill: #F4F4FD;
         width: calc((100% - 24px) / 2);
     }
 
-    .team > .container {
-        padding: 0 108px;
+    .feature-subtitle {
+        text-align: start;
     }
 
     .team-menu {
         gap: 64px 24px;
     }
     
-    .team-item {
-        width: calc((100% - 24px) / 2);
-    }
-
     .portfolio-menu {
         gap: 72px 24px;
     }
@@ -1021,7 +1014,6 @@ fill: #F4F4FD;
     }
     
     .feature-subtitle {
-        text-align: start;
         color: #2E2F42;
         font-size: 20px;
         font-weight: 500;
